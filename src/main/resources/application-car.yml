@@ -1,0 +1,9 @@
+docker:
+  container:
+    map:
+      "[user_1.0.0]": { name: user, ports: [ 8880:80 ], volumes: [ /root/car/user:/logs ], param: --spring.profiles.active=dev }
+      "[admin_1.0.0]": { name: admin, ports: [ 8881:80 ], volumes: [ /root/car/admin:/logs ], param: --spring.profiles.active=dev }
+      "[hw_1.0.0]": { name: car_hw, ports: [ 8999:8999,9999:9999,39100:39100 ], volumes: [ /root/car/hw:/logs ], param: --spring.profiles.active=dev }
+
+
+

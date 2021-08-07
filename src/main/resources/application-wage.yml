@@ -1,0 +1,12 @@
+docker:
+  container:
+    map:
+      "[d_1.0.0]":
+        name: wage
+        ports:
+          - 13000:80
+        volumes:
+        param:
+
+
+
