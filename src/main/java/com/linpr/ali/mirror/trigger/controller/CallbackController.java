@@ -42,7 +42,7 @@ public class CallbackController {
         String repoFullName = param.getRepository().getRepo_full_name();
         String dockerName = "registry." + region + ".aliyuncs.com/" + repoFullName + ":" + tag;
         log.info("镜像：{}", dockerName);
-        DockerContainerBean dockerContainerBean = dockerContainerProperties.getMap().get(tag);
+        DockerContainerBean dockerContainerBean = dockerContainerProperties.getMap().get(repoFullName + ":" + tag);
         if (!ObjectUtils.isEmpty(dockerContainerBean)) {
             consoleService.restartDocker(dockerName, dockerContainerBean.getName(),
                     dockerContainerBean.getPorts(), dockerContainerBean.getVolumes(), dockerContainerBean.getParam());

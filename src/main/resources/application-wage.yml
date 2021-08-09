@@ -1,7 +1,7 @@
 docker:
   container:
     map:
-      "[d_1.0.0]":
+      "[linpr/wage:d_1.0.0]":
         name: wage
         ports:
           - 13000:80
